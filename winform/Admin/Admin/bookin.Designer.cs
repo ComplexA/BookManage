@@ -56,11 +56,11 @@
             this.label12 = new System.Windows.Forms.Label();
             this.vnumup = new System.Windows.Forms.NumericUpDown();
             this.vindata = new System.Windows.Forms.DataGridView();
-            this.btbookin = new System.Windows.Forms.Button();
             this.dgvname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgdivision = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvwriter = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgtopic = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btbookin = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vnumup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vindata)).BeginInit();
@@ -278,6 +278,7 @@
             this.txtcaseID.Name = "txtcaseID";
             this.txtcaseID.Size = new System.Drawing.Size(135, 21);
             this.txtcaseID.TabIndex = 4;
+            this.txtcaseID.Leave += new System.EventHandler(this.txtcaseID_Leave);
             // 
             // label12
             // 
@@ -323,15 +324,6 @@
             this.vindata.Size = new System.Drawing.Size(484, 185);
             this.vindata.TabIndex = 7;
             // 
-            // btbookin
-            // 
-            this.btbookin.Location = new System.Drawing.Point(198, 426);
-            this.btbookin.Name = "btbookin";
-            this.btbookin.Size = new System.Drawing.Size(100, 23);
-            this.btbookin.TabIndex = 8;
-            this.btbookin.Text = "确认录入";
-            this.btbookin.UseVisualStyleBackColor = true;
-            // 
             // dgvname
             // 
             this.dgvname.HeaderText = "册号";
@@ -353,6 +345,16 @@
             this.dgtopic.HeaderText = "主题词";
             this.dgtopic.Name = "dgtopic";
             this.dgtopic.Width = 165;
+            // 
+            // btbookin
+            // 
+            this.btbookin.Location = new System.Drawing.Point(198, 426);
+            this.btbookin.Name = "btbookin";
+            this.btbookin.Size = new System.Drawing.Size(100, 23);
+            this.btbookin.TabIndex = 8;
+            this.btbookin.Text = "确认录入";
+            this.btbookin.UseVisualStyleBackColor = true;
+            this.btbookin.Click += new System.EventHandler(this.btbookin_Click);
             // 
             // bookin
             // 
