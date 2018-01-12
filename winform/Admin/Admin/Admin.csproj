@@ -127,6 +127,7 @@
     <Compile Include="schrd.Designer.cs">
       <DependentUpon>schrd.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserPublic.cs" />
     <EmbeddedResource Include="bookin.resx">
       <DependentUpon>bookin.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="mainForm.resx">
       <DependentUpon>mainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="person.resx">
+      <DependentUpon>person.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

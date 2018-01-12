@@ -15,5 +15,14 @@ namespace Admin
         {
             InitializeComponent();
         }
+
+        private void person_Load(object sender, EventArgs e)
+        {
+            userid.Text = UserPublic.userInfo[0];
+            usernm.Text = UserPublic.userInfo[1];
+            txtpwd.Text = UserPublic.userInfo[2];
+
+
+        }
     }
 }

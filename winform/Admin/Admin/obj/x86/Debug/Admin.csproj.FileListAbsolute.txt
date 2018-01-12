@@ -17,3 +17,4 @@ C:\Users\Administrator\Documents\GitHub\BookManage\winform\Admin\Admin\obj\x86\D
 C:\Users\Administrator\Documents\GitHub\BookManage\winform\Admin\Admin\obj\x86\Debug\Admin.Properties.Resources.resources
 C:\Users\Administrator\Documents\GitHub\BookManage\winform\Admin\Admin\obj\x86\Debug\Admin.csproj.GenerateResource.Cache
 E:\git\BookManage\winform\Admin\Admin\obj\x86\Debug\Admin.bookin.resources
+E:\git\BookManage\winform\Admin\Admin\obj\x86\Debug\Admin.person.resources

@@ -12,7 +12,6 @@ namespace Admin
 {
     public partial class bookin : Form
     {
-        //bool flag1 = false;
         public bookin()
         {
             InitializeComponent();
@@ -48,9 +47,8 @@ namespace Admin
                 MessageBox.Show("之前未被录入");
             else 
             {
-                //flag1 = true;
                 DataTable caseBk = ds.Tables[0];
-                //txtcaseID.Text = caseBk.Rows[0]["caseID"].ToString();
+                
                 txtcname.Text = caseBk.Rows[0]["caseName"].ToString();
                 txtwriter.Text = caseBk.Rows[0]["writer"].ToString();
                 txtdpt.Text=caseBk.Rows[0]["department"].ToString();
@@ -76,7 +74,6 @@ namespace Admin
                     vindata.Rows[i].Cells[2].Value = dsv.Tables[0].Rows[i]["vwriter"];
                     vindata.Rows[i].Cells[3].Value = dsv.Tables[0].Rows[i]["topic"];
                 }
-
             }
         }
 
@@ -93,7 +90,7 @@ namespace Admin
 
             for (int i = 0; i < vnumup.Value; i++)
             {
-                string sqlSt = "select * from volume where caseID='" + vindata.Rows[i].Cells[0].Value.ToString() + "'";
+                string sqlSt = "select * from volume where vID='" + vindata.Rows[i].Cells[0].Value.ToString() + "'";
                 DataSet dsv = new DataSet();
                 Cdatabase.conn.ConnectionString = Cdatabase.connStr;
                 Cdatabase.conn.Open();
@@ -153,10 +150,10 @@ namespace Admin
                 {
                     sqlinv += vindata.Rows[i].Cells[j].Value.ToString()+"','";
                 }
-                //sqlinv =sqlinv.Substring(0,sqlinv.Length-2);
+                
                 sqlinv += "false','"+txtcaseID.Text.ToString()+"')";
                 Cdatabase.UpdateDB(sqlinv);
-                //MessageBox.Show(sqlinv);
+                MessageBox.Show(sqlinv);
             }
         }
 
