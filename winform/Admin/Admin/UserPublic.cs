@@ -7,6 +7,6 @@ namespace Admin
 {
     class UserPublic
     {
-        public static string[] userInfo = new string[3];
+        public static string[] userInfo = new string[3];//ID,UserName,Password
     }
 }

@@ -79,6 +79,7 @@
             // 
             this.txtpwd.Location = new System.Drawing.Point(85, 151);
             this.txtpwd.Name = "txtpwd";
+            this.txtpwd.PasswordChar = '*';
             this.txtpwd.ReadOnly = true;
             this.txtpwd.Size = new System.Drawing.Size(100, 21);
             this.txtpwd.TabIndex = 5;
@@ -91,6 +92,7 @@
             this.chgpwd.TabIndex = 6;
             this.chgpwd.Text = "修改";
             this.chgpwd.UseVisualStyleBackColor = true;
+            this.chgpwd.Click += new System.EventHandler(this.chgpwd_Click);
             // 
             // chgname
             // 
@@ -100,6 +102,7 @@
             this.chgname.TabIndex = 7;
             this.chgname.Text = "修改";
             this.chgname.UseVisualStyleBackColor = true;
+            this.chgname.Click += new System.EventHandler(this.chgname_Click);
             // 
             // usernm
             // 
