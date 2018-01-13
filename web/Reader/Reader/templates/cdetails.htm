@@ -54,7 +54,12 @@
                 </tr>
                 <tr>
                     <td class="tt">ISBN</td><td class="ttd">$c.isbn</td>
-                    <!--<td class="tt">&nbsp;</td><td class="ttd">&nbsp;</td>-->
+                    <td class="tt">借阅状态</td>
+                    #if($c.state)
+                    <td class="ttd">借出</td>
+                    #else
+                    <td class="ttd">可借</td>
+                    #end
                 </tr>
             #end
             </table></font>
@@ -72,7 +77,7 @@
                     <td width="130px">分书名</td>
                     <td width="50px">分书著者</td>
                     <td width="300px">主题词</td>
-                    <td width="50px">借阅状态</td>
+                    
                 </tr>
                 #foreach($c in $Data.vbook)
                 <tr style="background-color:#eeeeee;">
@@ -80,11 +85,7 @@
                     <td>$c.division</td>
                     <td>$c.vwriter</td>
                     <td>$c.topic</td>
-                    #if($c.state)
-                    <td>借出</td>
-                    #else
-                    <td>可借</td>
-                    #end
+                    
                 </tr>
                 #end
             </table></font>
