@@ -153,7 +153,7 @@ namespace Admin
                 
                 sqlinv += "false','"+txtcaseID.Text.ToString()+"')";
                 Cdatabase.UpdateDB(sqlinv);
-                MessageBox.Show(sqlinv);
+                //MessageBox.Show(sqlinv);
             }
         }
 

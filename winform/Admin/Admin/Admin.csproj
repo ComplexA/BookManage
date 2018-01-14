@@ -76,6 +76,11 @@
     <Compile Include="bookin.Designer.cs">
       <DependentUpon>bookin.cs</DependentUpon>
     </Compile>
+    <Compile Include="bookmanageDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bookmanageDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Cdatabase.cs" />
     <Compile Include="lendbk.cs">
       <SubType>Form</SubType>
@@ -128,8 +133,14 @@
       <DependentUpon>schrd.cs</DependentUpon>
     </Compile>
     <Compile Include="UserPublic.cs" />
+    <EmbeddedResource Include="alllend.resx">
+      <DependentUpon>alllend.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="bookin.resx">
       <DependentUpon>bookin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lendbk.resx">
+      <DependentUpon>lendbk.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
@@ -150,6 +161,24 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="renewbk.resx">
+      <DependentUpon>renewbk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rtnbk.resx">
+      <DependentUpon>rtnbk.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="bookmanageDataSet.xsc">
+      <DependentUpon>bookmanageDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bookmanageDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bookmanageDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bookmanageDataSet.xss">
+      <DependentUpon>bookmanageDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

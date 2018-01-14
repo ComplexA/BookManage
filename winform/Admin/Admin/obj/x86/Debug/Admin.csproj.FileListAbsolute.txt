@@ -18,3 +18,8 @@ C:\Users\Administrator\Documents\GitHub\BookManage\winform\Admin\Admin\obj\x86\D
 C:\Users\Administrator\Documents\GitHub\BookManage\winform\Admin\Admin\obj\x86\Debug\Admin.csproj.GenerateResource.Cache
 E:\git\BookManage\winform\Admin\Admin\obj\x86\Debug\Admin.bookin.resources
 E:\git\BookManage\winform\Admin\Admin\obj\x86\Debug\Admin.person.resources
+E:\git\BookManage\winform\Admin\Admin\obj\x86\Debug\Admin.lendbk.resources
+E:\git\BookManage\winform\Admin\Admin\bin\Debug\Admin.exe.config
+E:\git\BookManage\winform\Admin\Admin\obj\x86\Debug\Admin.alllend.resources
+E:\git\BookManage\winform\Admin\Admin\obj\x86\Debug\Admin.renewbk.resources
+E:\git\BookManage\winform\Admin\Admin\obj\x86\Debug\Admin.rtnbk.resources
