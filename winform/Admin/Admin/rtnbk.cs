@@ -36,13 +36,15 @@ namespace Admin
             if (!(dscase.Tables[0].Rows.Count == 0))
             {
                 string sqlupcase = "update caseBook set state='false' where caseID='"+txtrtn.Text.Trim()+"'";
-                string sqldelete = "delete * from lend where cID='" + txtrtn.Text.Trim() + "'";
+                string sqldelete = "delete from lend where cID='" + txtrtn.Text.Trim() + "'";
                 
                 DateTime d = Convert.ToDateTime(dscase.Tables[0].Rows[0]["rtndate"].ToString());
                 if (DateTime.Now < d)
                 {
                     Cdatabase.UpdateDB(sqlupcase);
                     Cdatabase.UpdateDB(sqldelete);
+                    MessageBox.Show("ok");
+                    txtrtn.Text="";
                 }
                 else
                 {

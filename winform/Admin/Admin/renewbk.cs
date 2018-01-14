@@ -49,12 +49,21 @@ namespace Admin
                     adapterd.Fill(dscased);
                     Cdatabase.conn.Close();
 
-                    string showinfo = "读者编码：" + UserPublic.userInfo[0].ToString() +
+                    string showinfo = "读者编码：" + dscase.Tables[0].Rows[0]["rdID"].ToString() +
                     "\n图书编码：" + txtrn.Text.Trim() +
                     "\n借书日期：" + dscased.Tables[0].Rows[0]["lenddate"].ToString().Substring(0,9) +
                     "\n还书日期：" + dscased.Tables[0].Rows[0]["rtndate"].ToString().Substring(0,9);
 
                     MessageBox.Show(showinfo, "续借成功");
+                    txtrn.Text = "";
+                    rid.Visible = false;
+                    ridcp.Visible = false;
+                    lenddt.Visible = false;
+                    lddtcp.Visible = false;
+                    rndt.Visible = false;
+                    rndtcp.Visible = false;
+                    rn.Visible = false;
+                    rncp.Visible = false;
                 }
                 else
                 {
@@ -100,7 +109,7 @@ namespace Admin
                 rn.Visible = true;
                 rncp.Visible = true;
 
-                rid.Text = UserPublic.userInfo[0].ToString();
+                rid.Text = dscase.Tables[0].Rows[0]["rdID"].ToString();
                 lenddt.Text = dscase.Tables[0].Rows[0]["lenddate"].ToString().Substring(0, 9);
                 rndt.Text = dscase.Tables[0].Rows[0]["rtndate"].ToString().Substring(0, 9);
                 if (dscase.Tables[0].Rows[0]["renew"].ToString()=="True")
