@@ -10,6 +10,8 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=PC-201211211604;Initial Catalog=bookmanage;User ID=sa;Password=sa</Value>
     </Setting>
+<<<<<<< HEAD
+=======
     <Setting Name="bookmanageConnectionSchbk" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
@@ -18,5 +20,6 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=localhost;Initial Catalog=bookmanage;Persist Security Info=True;User ID=sa;Password=sa</Value>
     </Setting>
+>>>>>>> 7c57701bb9f59cd6631acfbeb322f9d04584b178
   </Settings>
 </SettingsFile>

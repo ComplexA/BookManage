@@ -15,6 +15,8 @@ namespace Admin
         {
             InitializeComponent();
         }
+<<<<<<< HEAD
+=======
 
         private void alllend_Load(object sender, EventArgs e)
         {
@@ -39,5 +41,6 @@ namespace Admin
     
 
 
+>>>>>>> 7c57701bb9f59cd6631acfbeb322f9d04584b178
     }
 }

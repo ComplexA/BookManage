@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+<<<<<<< HEAD
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Text = "allrd";
+        }
+
+        #endregion
+=======
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(allrd));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.caseBookBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -178,5 +185,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn rdbirthDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rddptDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rdsexDataGridViewTextBoxColumn;
+>>>>>>> 7c57701bb9f59cd6631acfbeb322f9d04584b178
     }
 }
