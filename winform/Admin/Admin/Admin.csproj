@@ -52,8 +52,6 @@
     <Compile Include="addrd.Designer.cs">
       <DependentUpon>addrd.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-=======
     <Compile Include="allrd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,26 +63,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bookmanageDataSet2.xsd</DependentUpon>
     </Compile>
->>>>>>> 7c57701bb9f59cd6631acfbeb322f9d04584b178
     <Compile Include="allbk.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="allbk.Designer.cs">
       <DependentUpon>allbk.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-    <Compile Include="alllend.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="alllend.Designer.cs">
-      <DependentUpon>alllend.cs</DependentUpon>
-    </Compile>
-    <Compile Include="allrd.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="allrd.Designer.cs">
-      <DependentUpon>allrd.cs</DependentUpon>
-=======
     <Compile Include="bookmanageDataSet3.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -112,7 +96,6 @@
     </Compile>
     <Compile Include="alllend.Designer.cs">
       <DependentUpon>alllend.cs</DependentUpon>
->>>>>>> 7c57701bb9f59cd6631acfbeb322f9d04584b178
     </Compile>
     <Compile Include="bookin.cs">
       <SubType>Form</SubType>
@@ -164,21 +147,6 @@
     <Compile Include="rtnbk.Designer.cs">
       <DependentUpon>rtnbk.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-    <Compile Include="schbk.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="schbk.Designer.cs">
-      <DependentUpon>schbk.cs</DependentUpon>
-    </Compile>
-    <Compile Include="schrd.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="schrd.Designer.cs">
-      <DependentUpon>schrd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserPublic.cs" />
-=======
     <Compile Include="UserPublic.cs" />
     <EmbeddedResource Include="allrd.resx">
       <DependentUpon>allrd.cs</DependentUpon>
@@ -192,7 +160,6 @@
     <EmbeddedResource Include="schbk.resx">
       <DependentUpon>schbk.cs</DependentUpon>
     </EmbeddedResource>
->>>>>>> 7c57701bb9f59cd6631acfbeb322f9d04584b178
     <EmbeddedResource Include="alllend.resx">
       <DependentUpon>alllend.cs</DependentUpon>
     </EmbeddedResource>
@@ -239,8 +206,6 @@
     <None Include="bookmanageDataSet.xss">
       <DependentUpon>bookmanageDataSet.xsd</DependentUpon>
     </None>
-<<<<<<< HEAD
-=======
     <None Include="bookmanageDataSet1.xsc">
       <DependentUpon>bookmanageDataSet1.xsd</DependentUpon>
     </None>
@@ -274,7 +239,6 @@
     <None Include="bookmanageDataSet3.xss">
       <DependentUpon>bookmanageDataSet3.xsd</DependentUpon>
     </None>
->>>>>>> 7c57701bb9f59cd6631acfbeb322f9d04584b178
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

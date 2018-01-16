@@ -29,13 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-<<<<<<< HEAD
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "allbk";
-        }
-
-        #endregion
-=======
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(allbk));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.caseIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -241,6 +234,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn floorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn writerDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn stateDataGridViewCheckBoxColumn;
->>>>>>> 7c57701bb9f59cd6631acfbeb322f9d04584b178
     }
 }

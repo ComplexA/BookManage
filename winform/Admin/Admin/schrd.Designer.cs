@@ -29,13 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-<<<<<<< HEAD
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "schrd";
-        }
-
-        #endregion
-=======
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(schrd));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.readerBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -259,6 +252,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn rdbirthDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rddptDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rdsexDataGridViewTextBoxColumn;
->>>>>>> 7c57701bb9f59cd6631acfbeb322f9d04584b178
     }
 }
