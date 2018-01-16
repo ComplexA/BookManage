@@ -13,6 +13,7 @@
     <RootNamespace>Reader</RootNamespace>
     <AssemblyName>Reader</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -60,7 +61,6 @@
     <Content Include="templates\schCResult.htm" />
     <Content Include="templates\schVResult.htm" />
     <Content Include="templates\search.htm" />
-    <Content Include="templates\lend.htm" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -79,18 +79,12 @@
     <Compile Include="templates\search.ashx.cs">
       <DependentUpon>search.ashx</DependentUpon>
     </Compile>
-    <Compile Include="templates\lend.ashx.cs">
-      <DependentUpon>lend.ashx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="templates\cdetails.ashx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="templates\search.ashx" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="templates\lend.ashx" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

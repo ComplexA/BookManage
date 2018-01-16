@@ -3,3 +3,8 @@ E:\git\BookManage\web\Reader\Reader\bin\Reader.dll
 E:\git\BookManage\web\Reader\Reader\bin\Reader.pdb
 E:\git\BookManage\web\Reader\Reader\obj\Debug\Reader.dll
 E:\git\BookManage\web\Reader\Reader\obj\Debug\Reader.pdb
+C:\Users\Administrator\Documents\GitHub\BookManage\web\Reader\Reader\bin\Reader.dll
+C:\Users\Administrator\Documents\GitHub\BookManage\web\Reader\Reader\bin\Reader.pdb
+C:\Users\Administrator\Documents\GitHub\BookManage\web\Reader\Reader\obj\Debug\Reader.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\GitHub\BookManage\web\Reader\Reader\obj\Debug\Reader.dll
+C:\Users\Administrator\Documents\GitHub\BookManage\web\Reader\Reader\obj\Debug\Reader.pdb

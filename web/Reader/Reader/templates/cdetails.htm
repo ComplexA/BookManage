@@ -13,11 +13,11 @@
 <body>
     <center>
 		<div style="width:800px;">
-            <!--header-->
+            <!--header
 			<div style="float:right;"><font style="font-size:4px">
 			    <a href="#">登陆</a>
 			    <a href="#">注册</a></font>
-			</div>
+			</div>-->
 			<div>
 				<img src="../img/head.png" />
 			</div>
@@ -54,7 +54,12 @@
                 </tr>
                 <tr>
                     <td class="tt">ISBN</td><td class="ttd">$c.isbn</td>
-                    <!--<td class="tt">&nbsp;</td><td class="ttd">&nbsp;</td>-->
+                    <td class="tt">借阅状态</td>
+                    #if($c.state)
+                    <td class="ttd">借出</td>
+                    #else
+                    <td class="ttd">可借</td>
+                    #end
                 </tr>
             #end
             </table></font>
@@ -68,23 +73,19 @@
             <table cellpadding="4px">
             <thead><tr><td><img src="../img/vbinfo.png" /></td><td></td></tr></thead>
                 <tr style="background-color:#CCCCCC;">
-                    <td width="110px">册名</td>
-                    <td width="110px">分书名</td>
+                    <td width="60px">册号</td>
+                    <td width="130px">分书名</td>
                     <td width="50px">分书著者</td>
-                    <td width="270px">主题词</td>
-                    <td width="50px">借阅状态</td>
+                    <td width="300px">主题词</td>
+                    
                 </tr>
                 #foreach($c in $Data.vbook)
                 <tr style="background-color:#eeeeee;">
-                    <td><a href="lend.ashx?vid=$c.vID">$c.vname</a></td>
+                    <td>$c.vID</td>
                     <td>$c.division</td>
                     <td>$c.vwriter</td>
                     <td>$c.topic</td>
-                    #if($c.state)
-                    <td>借出</td>
-                    #else
-                    <td><a href="lend.ashx?vid=$c.vID">可借</a></td>
-                    #end
+                    
                 </tr>
                 #end
             </table></font>

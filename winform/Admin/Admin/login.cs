@@ -40,6 +40,10 @@ namespace Admin
                     {
                         if (ad.Tables[0].Rows[0]["adminPwd"].ToString() == upwd.Text.ToString())
                         {
+                            UserPublic.userInfo[0] = uname.Text.Trim();
+                            UserPublic.userInfo[1] = ad.Tables[0].Rows[0]["adminName"].ToString();
+                            UserPublic.userInfo[2] = ad.Tables[0].Rows[0]["adminPwd"].ToString();
+
                             this.Hide();
                             mainForm adm = new mainForm();
                             adm.Show();

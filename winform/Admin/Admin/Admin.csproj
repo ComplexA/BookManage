@@ -46,7 +46,64 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addrd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addrd.Designer.cs">
+      <DependentUpon>addrd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bookmanageDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bookmanageDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="allbk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="allbk.Designer.cs">
+      <DependentUpon>allbk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="schbk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="schbk.Designer.cs">
+      <DependentUpon>schbk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bookmanageDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bookmanageDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="alllend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="alllend.Designer.cs">
+      <DependentUpon>alllend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="allrd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="allrd.Designer.cs">
+      <DependentUpon>allrd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bookin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bookin.Designer.cs">
+      <DependentUpon>bookin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bookmanageDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bookmanageDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Cdatabase.cs" />
+    <Compile Include="lendbk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lendbk.Designer.cs">
+      <DependentUpon>lendbk.cs</DependentUpon>
+    </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,13 +116,56 @@
     <Compile Include="mainForm.Designer.cs">
       <DependentUpon>mainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="person.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="person.Designer.cs">
+      <DependentUpon>person.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="renewbk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="renewbk.Designer.cs">
+      <DependentUpon>renewbk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rtnbk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rtnbk.Designer.cs">
+      <DependentUpon>rtnbk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="schrd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="schrd.Designer.cs">
+      <DependentUpon>schrd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPublic.cs" />
+    <EmbeddedResource Include="allbk.resx">
+      <DependentUpon>allbk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="schbk.resx">
+      <DependentUpon>schbk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="alllend.resx">
+      <DependentUpon>alllend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bookin.resx">
+      <DependentUpon>bookin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lendbk.resx">
+      <DependentUpon>lendbk.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mainForm.resx">
       <DependentUpon>mainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="person.resx">
+      <DependentUpon>person.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -77,6 +177,46 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="renewbk.resx">
+      <DependentUpon>renewbk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rtnbk.resx">
+      <DependentUpon>rtnbk.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="bookmanageDataSet.xsc">
+      <DependentUpon>bookmanageDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bookmanageDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bookmanageDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bookmanageDataSet.xss">
+      <DependentUpon>bookmanageDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bookmanageDataSet1.xsc">
+      <DependentUpon>bookmanageDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="bookmanageDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bookmanageDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bookmanageDataSet1.xss">
+      <DependentUpon>bookmanageDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="bookmanageDataSet2.xsc">
+      <DependentUpon>bookmanageDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="bookmanageDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bookmanageDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bookmanageDataSet2.xss">
+      <DependentUpon>bookmanageDataSet2.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

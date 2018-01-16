@@ -11,13 +11,13 @@
 </style>
 <body>
     <center>
-		<div style="width:800px;">
+		<div style="width:800px;"><!--
             <div style="float:right;"><font style="font-size:4px">
 			    <a href="#">登陆</a>
 			    <a href="#">注册</a></font>
-			</div>
+			</div>-->
             <div><img src="../img/head.png" /></div>
-            <!--search box-->
+            <!--search box
              <div>
                 <form action="search.ashx" method="post">
                     <select name="schitem" id="schitem">
@@ -27,7 +27,7 @@
 						<option value="vname">分书名</option>
 						<option value="vwriter">分书著者</option>
                     </select>
-					<input type="text"  style="width:225px;" name="schtx" id="schtx" value="请输入" onfocus="if(this.value == '请输入') this.value='';"/>
+					<input type="text"  style="width:225px;" name="schtx" id="schtx"  value="$Data.tx"/>
 					<input type="submit" value="查找" />
                     <a href="search.ashx"><input type="button" value="查看图书总目" /></a>
                 </form>
@@ -50,9 +50,10 @@
                 #foreach($c in $Data.book)
                 <tr style="background-color:#eeeeee;">
                     <td>
-                        <a href="cdetails.ashx?cid=$c.caseID">
+                        <a href="cdetails.ashx?cid=$c.caseID" target="_blank">
                             $c.caseName
-                        </a></td>
+                        </a>
+                    </td>
                     <td>$c.writer</td>
                     <td>$c.press</td>
                     <td>$c.pubdate</td>
@@ -63,6 +64,7 @@
                 #end
             </table></font>
            </div>
+           
         </div>
     </center>
 </body>

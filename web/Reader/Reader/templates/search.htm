@@ -12,26 +12,22 @@
 <body>
 	<center>
 		<div style="width:800px;">
-			<div style="float:right;"><font style="font-size:4px">
-			    <a href="#">登陆</a>
-			    <a href="#">注册</a></font>
-			</div>
 			<div style="width:800px; height:125px"></div>
 			<div>
 				<img src="../img/head.png" />
 			</div>
             <div>
-                <form action="search.ashx" method="post">
+                <form action="search.ashx" method="post" target="_blank">
                     <select name="schitem" id="schitem">
                         <option value="caseName">书名</option>
 						<option value="isbn">ISBN</option>
 						<option value="writer">作者</option>
-						<option value="vname">分书名</option>
+						<option value="division">分书名</option>
 						<option value="vwriter">分书著者</option>
                     </select>
-					<input type="text"  style="width:225px;" name="schtx" id="schtx" value="请输入" onfocus="if(this.value == '请输入') this.value='';"/>
+					<input type="text"  style="width:225px;" name="schtx" id="schtx"/>
 					<input type="submit" value="查找" />
-                    <a href="search.ashx"><input type="button" value="查看图书总目" /></a>
+                    <a href="search.ashx" target="_blank"><input type="button" value="查看图书总目" /></a>
                 </form>
             </div>
 		</div>

@@ -29,139 +29,199 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
-            this.book = new System.Windows.Forms.TabControl();
-            this.bookin = new System.Windows.Forms.TabPage();
-            this.schbk = new System.Windows.Forms.TabPage();
-            this.schrd = new System.Windows.Forms.TabPage();
-            this.person = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.uid = new System.Windows.Forms.Label();
-            this.book.SuspendLayout();
-            this.person.SuspendLayout();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.tButton1 = new System.Windows.Forms.ToolStripButton();
+            this.tButton2 = new System.Windows.Forms.ToolStripSplitButton();
+            this.查看所有图书ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.图书查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tButton3 = new System.Windows.Forms.ToolStripSplitButton();
+            this.添加读者ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.查询读者ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.查看所有读者ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tButton4 = new System.Windows.Forms.ToolStripSplitButton();
+            this.借书ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.还书ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.续借ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.所有借阅信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tButton5 = new System.Windows.Forms.ToolStripButton();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // book
+            // toolStrip1
             // 
-            this.book.Controls.Add(this.bookin);
-            this.book.Controls.Add(this.schbk);
-            this.book.Controls.Add(this.schrd);
-            this.book.Controls.Add(this.person);
-            this.book.Location = new System.Drawing.Point(14, 12);
-            this.book.Name = "book";
-            this.book.SelectedIndex = 0;
-            this.book.Size = new System.Drawing.Size(662, 451);
-            this.book.TabIndex = 0;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tButton1,
+            this.tButton2,
+            this.tButton3,
+            this.tButton4,
+            this.tButton5});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(974, 25);
+            this.toolStrip1.TabIndex = 1;
+            this.toolStrip1.Text = "toolStrip1";
             // 
-            // bookin
+            // tButton1
             // 
-            this.bookin.Location = new System.Drawing.Point(4, 22);
-            this.bookin.Name = "bookin";
-            this.bookin.Padding = new System.Windows.Forms.Padding(3);
-            this.bookin.Size = new System.Drawing.Size(654, 425);
-            this.bookin.TabIndex = 0;
-            this.bookin.Text = "图书录入";
-            this.bookin.UseVisualStyleBackColor = true;
+            this.tButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tButton1.Image = ((System.Drawing.Image)(resources.GetObject("tButton1.Image")));
+            this.tButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tButton1.Name = "tButton1";
+            this.tButton1.Size = new System.Drawing.Size(60, 22);
+            this.tButton1.Text = "图书录入";
+            this.tButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
-            // schbk
+            // tButton2
             // 
-            this.schbk.Location = new System.Drawing.Point(4, 22);
-            this.schbk.Name = "schbk";
-            this.schbk.Padding = new System.Windows.Forms.Padding(3);
-            this.schbk.Size = new System.Drawing.Size(654, 425);
-            this.schbk.TabIndex = 2;
-            this.schbk.Text = "图书查询";
-            this.schbk.UseVisualStyleBackColor = true;
+            this.tButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.查看所有图书ToolStripMenuItem,
+            this.图书查询ToolStripMenuItem});
+            this.tButton2.Image = ((System.Drawing.Image)(resources.GetObject("tButton2.Image")));
+            this.tButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tButton2.Name = "tButton2";
+            this.tButton2.Size = new System.Drawing.Size(72, 22);
+            this.tButton2.Text = "图书管理";
             // 
-            // schrd
+            // 查看所有图书ToolStripMenuItem
             // 
-            this.schrd.Location = new System.Drawing.Point(4, 22);
-            this.schrd.Name = "schrd";
-            this.schrd.Padding = new System.Windows.Forms.Padding(3);
-            this.schrd.Size = new System.Drawing.Size(654, 425);
-            this.schrd.TabIndex = 3;
-            this.schrd.Text = "读者查询";
-            this.schrd.UseVisualStyleBackColor = true;
+            this.查看所有图书ToolStripMenuItem.Name = "查看所有图书ToolStripMenuItem";
+            this.查看所有图书ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.查看所有图书ToolStripMenuItem.Text = "查看所有图书";
+            this.查看所有图书ToolStripMenuItem.Click += new System.EventHandler(this.查看所有图书ToolStripMenuItem_Click);
             // 
-            // person
+            // 图书查询ToolStripMenuItem
             // 
-            this.person.Controls.Add(this.uid);
-            this.person.Controls.Add(this.label3);
-            this.person.Controls.Add(this.label2);
-            this.person.Controls.Add(this.label1);
-            this.person.Location = new System.Drawing.Point(4, 22);
-            this.person.Name = "person";
-            this.person.Padding = new System.Windows.Forms.Padding(3);
-            this.person.Size = new System.Drawing.Size(654, 425);
-            this.person.TabIndex = 4;
-            this.person.Text = "个人管理";
-            this.person.UseVisualStyleBackColor = true;
+            this.图书查询ToolStripMenuItem.Name = "图书查询ToolStripMenuItem";
+            this.图书查询ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.图书查询ToolStripMenuItem.Text = "图书查询";
+            this.图书查询ToolStripMenuItem.Click += new System.EventHandler(this.图书查询ToolStripMenuItem_Click);
             // 
-            // label1
+            // tButton3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(174, 79);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 12);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ID：";
+            this.tButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tButton3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.添加读者ToolStripMenuItem,
+            this.查询读者ToolStripMenuItem,
+            this.查看所有读者ToolStripMenuItem});
+            this.tButton3.Image = ((System.Drawing.Image)(resources.GetObject("tButton3.Image")));
+            this.tButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tButton3.Name = "tButton3";
+            this.tButton3.Size = new System.Drawing.Size(72, 22);
+            this.tButton3.Text = "读者管理";
             // 
-            // label2
+            // 添加读者ToolStripMenuItem
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(174, 110);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 12);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "用户名：";
+            this.添加读者ToolStripMenuItem.Name = "添加读者ToolStripMenuItem";
+            this.添加读者ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.添加读者ToolStripMenuItem.Text = "添加读者";
+            this.添加读者ToolStripMenuItem.Click += new System.EventHandler(this.添加读者ToolStripMenuItem_Click);
             // 
-            // label3
+            // 查询读者ToolStripMenuItem
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(174, 141);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 12);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "密码：";
+            this.查询读者ToolStripMenuItem.Name = "查询读者ToolStripMenuItem";
+            this.查询读者ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.查询读者ToolStripMenuItem.Text = "查询读者";
+            this.查询读者ToolStripMenuItem.Click += new System.EventHandler(this.查询读者ToolStripMenuItem_Click);
             // 
-            // uid
+            // 查看所有读者ToolStripMenuItem
             // 
-            this.uid.AutoSize = true;
-            this.uid.Location = new System.Drawing.Point(209, 79);
-            this.uid.Name = "uid";
-            this.uid.Size = new System.Drawing.Size(23, 12);
-            this.uid.TabIndex = 3;
-            this.uid.Text = "uid";
+            this.查看所有读者ToolStripMenuItem.Name = "查看所有读者ToolStripMenuItem";
+            this.查看所有读者ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.查看所有读者ToolStripMenuItem.Text = "查看所有读者";
+            this.查看所有读者ToolStripMenuItem.Click += new System.EventHandler(this.查看所有读者ToolStripMenuItem_Click);
+            // 
+            // tButton4
+            // 
+            this.tButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tButton4.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.借书ToolStripMenuItem,
+            this.还书ToolStripMenuItem,
+            this.续借ToolStripMenuItem,
+            this.所有借阅信息ToolStripMenuItem});
+            this.tButton4.Image = ((System.Drawing.Image)(resources.GetObject("tButton4.Image")));
+            this.tButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tButton4.Name = "tButton4";
+            this.tButton4.Size = new System.Drawing.Size(72, 22);
+            this.tButton4.Text = "借阅管理";
+            // 
+            // 借书ToolStripMenuItem
+            // 
+            this.借书ToolStripMenuItem.Name = "借书ToolStripMenuItem";
+            this.借书ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.借书ToolStripMenuItem.Text = "借书";
+            this.借书ToolStripMenuItem.Click += new System.EventHandler(this.借书ToolStripMenuItem_Click);
+            // 
+            // 还书ToolStripMenuItem
+            // 
+            this.还书ToolStripMenuItem.Name = "还书ToolStripMenuItem";
+            this.还书ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.还书ToolStripMenuItem.Text = "还书";
+            this.还书ToolStripMenuItem.Click += new System.EventHandler(this.还书ToolStripMenuItem_Click);
+            // 
+            // 续借ToolStripMenuItem
+            // 
+            this.续借ToolStripMenuItem.Name = "续借ToolStripMenuItem";
+            this.续借ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.续借ToolStripMenuItem.Text = "续借";
+            this.续借ToolStripMenuItem.Click += new System.EventHandler(this.续借ToolStripMenuItem_Click);
+            // 
+            // 所有借阅信息ToolStripMenuItem
+            // 
+            this.所有借阅信息ToolStripMenuItem.Name = "所有借阅信息ToolStripMenuItem";
+            this.所有借阅信息ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.所有借阅信息ToolStripMenuItem.Text = "所有借阅信息";
+            this.所有借阅信息ToolStripMenuItem.Click += new System.EventHandler(this.所有借阅信息ToolStripMenuItem_Click);
+            // 
+            // tButton5
+            // 
+            this.tButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tButton5.Image = ((System.Drawing.Image)(resources.GetObject("tButton5.Image")));
+            this.tButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tButton5.Name = "tButton5";
+            this.tButton5.Size = new System.Drawing.Size(60, 22);
+            this.tButton5.Text = "个人管理";
+            this.tButton5.Click += new System.EventHandler(this.tButton5_Click);
             // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(691, 470);
-            this.Controls.Add(this.book);
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClientSize = new System.Drawing.Size(974, 635);
+            this.Controls.Add(this.toolStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IsMdiContainer = true;
             this.Name = "mainForm";
             this.Text = "古籍图书管理";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.mainForm_FormClosed);
-            this.book.ResumeLayout(false);
-            this.person.ResumeLayout(false);
-            this.person.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl book;
-        private System.Windows.Forms.TabPage bookin;
-        private System.Windows.Forms.TabPage schbk;
-        private System.Windows.Forms.TabPage schrd;
-        private System.Windows.Forms.TabPage person;
-        private System.Windows.Forms.Label uid;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton tButton1;
+        private System.Windows.Forms.ToolStripSplitButton tButton2;
+        private System.Windows.Forms.ToolStripSplitButton tButton3;
+        private System.Windows.Forms.ToolStripSplitButton tButton4;
+        private System.Windows.Forms.ToolStripButton tButton5;
+        private System.Windows.Forms.ToolStripMenuItem 查看所有图书ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 图书查询ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 添加读者ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 查询读者ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 查看所有读者ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 借书ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 还书ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 续借ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 所有借阅信息ToolStripMenuItem;
+
+
     }
 }
 

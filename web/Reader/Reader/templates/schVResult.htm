@@ -11,13 +11,13 @@
 </style>
 <body>
     <center>
-		<div style="width:800px;">
+		<div style="width:800px;"><!--
             <div style="float:right;"><font style="color:black; font-size:4px;">
 			    <a href="#">登陆</a>
 			    <a href="#">注册</a></font>
-			</div>
+			</div>-->
             <div><img src="../img/head.png" /></div>
-            <!--search box-->
+            <!--search box
              <div>
                 <form action="search.ashx" method="post">
                     <select name="schitem" id="schitem">
@@ -27,9 +27,9 @@
 						<option value="vname">分书名</option>
 						<option value="vwriter">分书著者</option>
                     </select>
-					<input type="text"  style="width:225px;" name="schtx" id="schtx" value="请输入" onfocus="if(this.value == '请输入') this.value='';"/>
+					<input type="text"  style="width:225px;" name="schtx" id="schtx" value="$Data.tx" />
 					<input type="submit" value="查找" />
-                    <a href="search.ashx"><input type="button" value="查看图书总目" /></a>
+                    <a href="search.ashx?pnum=1"><input type="button" value="查看图书总目" /></a>
                 </form>
             </div>
             <div style="width:800px; height:40px"></div>
@@ -38,8 +38,8 @@
             <font style="font-size:5px">
              <table cellpadding="4px">
                 <tr style="background-color:#CCCCCC;">
-                    <td width="15%">册名</td>
-                    <td width="15%">分书名</td>
+                    <td width="10%">册号</td>
+                    <td width="20%">分书名</td>
                     <td width="10%">分书著者</td>
                     <td width="14%">出版社</td>
                     <td width="15%">出版年</td>
@@ -48,8 +48,8 @@
                 </tr>
                 #foreach($c in $Data.book)
                 <tr style="background-color:#eeeeee;">
-                    <td><a href="cdetails.ashx?cid=$c.caseID">$c.vname</a></td>
-                    <td>$c.division</td>
+                    <td><a href="cdetails.ashx?cid=$c.caseID" target="_blank">$c.vid</a></td>
+                    <td><a href="cdetails.ashx?cid=$c.caseID" target="_blank">$c.division</a></td>
                     <td>$c.vwriter</td>
                     <td>$c.press</td>
                     <td>$c.pubdate</td>
