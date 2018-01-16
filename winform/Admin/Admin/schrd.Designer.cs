@@ -31,6 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(schrd));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rdnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rdbirthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rddptDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rdsexDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.readerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bookmanageDataSet3BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bookmanageDataSet3 = new Admin.bookmanageDataSet3();
@@ -44,11 +49,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.caseBookTableAdapter = new Admin.bookmanageDataSet2TableAdapters.caseBookTableAdapter();
             this.readerTableAdapter = new Admin.bookmanageDataSet3TableAdapters.readerTableAdapter();
-            this.rdsexDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rddptDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rdbirthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rdnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.readerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookmanageDataSet3BindingSource)).BeginInit();
@@ -75,6 +75,41 @@
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.Size = new System.Drawing.Size(543, 372);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "rdID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "读者号";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // rdnameDataGridViewTextBoxColumn
+            // 
+            this.rdnameDataGridViewTextBoxColumn.DataPropertyName = "rdname";
+            this.rdnameDataGridViewTextBoxColumn.HeaderText = "读者姓名";
+            this.rdnameDataGridViewTextBoxColumn.Name = "rdnameDataGridViewTextBoxColumn";
+            this.rdnameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rdbirthDataGridViewTextBoxColumn
+            // 
+            this.rdbirthDataGridViewTextBoxColumn.DataPropertyName = "rdbirth";
+            this.rdbirthDataGridViewTextBoxColumn.HeaderText = "出生日期";
+            this.rdbirthDataGridViewTextBoxColumn.Name = "rdbirthDataGridViewTextBoxColumn";
+            this.rdbirthDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rddptDataGridViewTextBoxColumn
+            // 
+            this.rddptDataGridViewTextBoxColumn.DataPropertyName = "rddpt";
+            this.rddptDataGridViewTextBoxColumn.HeaderText = "所在学院 ";
+            this.rddptDataGridViewTextBoxColumn.Name = "rddptDataGridViewTextBoxColumn";
+            this.rddptDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rdsexDataGridViewTextBoxColumn
+            // 
+            this.rdsexDataGridViewTextBoxColumn.DataPropertyName = "rdsex";
+            this.rdsexDataGridViewTextBoxColumn.HeaderText = "性别";
+            this.rdsexDataGridViewTextBoxColumn.Name = "rdsexDataGridViewTextBoxColumn";
+            this.rdsexDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // readerBindingSource
             // 
@@ -162,41 +197,6 @@
             // 
             this.readerTableAdapter.ClearBeforeFill = true;
             // 
-            // rdsexDataGridViewTextBoxColumn
-            // 
-            this.rdsexDataGridViewTextBoxColumn.DataPropertyName = "rdsex";
-            this.rdsexDataGridViewTextBoxColumn.HeaderText = "性别";
-            this.rdsexDataGridViewTextBoxColumn.Name = "rdsexDataGridViewTextBoxColumn";
-            this.rdsexDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // rddptDataGridViewTextBoxColumn
-            // 
-            this.rddptDataGridViewTextBoxColumn.DataPropertyName = "rddpt";
-            this.rddptDataGridViewTextBoxColumn.HeaderText = "所在学院 ";
-            this.rddptDataGridViewTextBoxColumn.Name = "rddptDataGridViewTextBoxColumn";
-            this.rddptDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // rdbirthDataGridViewTextBoxColumn
-            // 
-            this.rdbirthDataGridViewTextBoxColumn.DataPropertyName = "rdbirth";
-            this.rdbirthDataGridViewTextBoxColumn.HeaderText = "出生日期";
-            this.rdbirthDataGridViewTextBoxColumn.Name = "rdbirthDataGridViewTextBoxColumn";
-            this.rdbirthDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // rdnameDataGridViewTextBoxColumn
-            // 
-            this.rdnameDataGridViewTextBoxColumn.DataPropertyName = "rdname";
-            this.rdnameDataGridViewTextBoxColumn.HeaderText = "读者姓名";
-            this.rdnameDataGridViewTextBoxColumn.Name = "rdnameDataGridViewTextBoxColumn";
-            this.rdnameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "rdID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "读者号";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
             // schrd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -210,7 +210,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "schrd";
-            this.Text = "图书查询";
+            this.Text = "读者查询";
             this.Load += new System.EventHandler(this.alllend_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.readerBindingSource)).EndInit();
