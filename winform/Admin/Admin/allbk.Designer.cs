@@ -73,11 +73,11 @@
             this.writerDataGridViewTextBoxColumn,
             this.stateDataGridViewCheckBoxColumn});
             this.dataGridView1.DataSource = this.caseBookBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(14, 62);
+            this.dataGridView1.Location = new System.Drawing.Point(1, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(543, 372);
+            this.dataGridView1.Size = new System.Drawing.Size(598, 372);
             this.dataGridView1.TabIndex = 0;
             // 
             // caseIDDataGridViewTextBoxColumn
@@ -193,11 +193,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(571, 446);
+            this.ClientSize = new System.Drawing.Size(599, 446);
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "allbk";
-            this.Text = "所有借阅信息";
+            this.Text = "所有图书信息";
             this.Load += new System.EventHandler(this.alllend_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.caseBookBindingSource)).EndInit();

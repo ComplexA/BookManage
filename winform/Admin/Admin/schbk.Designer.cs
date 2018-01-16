@@ -31,15 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(schbk));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lendBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.combosch = new System.Windows.Forms.ComboBox();
-            this.txtsch = new System.Windows.Forms.TextBox();
-            this.btsch = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.bookmanageDataSet2 = new Admin.bookmanageDataSet2();
-            this.caseBookBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.caseBookTableAdapter = new Admin.bookmanageDataSet2TableAdapters.caseBookTableAdapter();
             this.caseIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.caseNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,10 +44,19 @@
             this.floorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.writerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stateDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.caseBookBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bookmanageDataSet2 = new Admin.bookmanageDataSet2();
+            this.lendBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.combosch = new System.Windows.Forms.ComboBox();
+            this.txtsch = new System.Windows.Forms.TextBox();
+            this.btsch = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.caseBookTableAdapter = new Admin.bookmanageDataSet2TableAdapters.caseBookTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lendBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookmanageDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.caseBookBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookmanageDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lendBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -84,73 +84,6 @@
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.Size = new System.Drawing.Size(543, 372);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // lendBindingSource
-            // 
-            this.lendBindingSource.DataMember = "lend";
-            // 
-            // combosch
-            // 
-            this.combosch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combosch.FormattingEnabled = true;
-            this.combosch.Items.AddRange(new object[] {
-            "图书编码",
-            "书名",
-            "作者"});
-            this.combosch.Location = new System.Drawing.Point(71, 24);
-            this.combosch.Name = "combosch";
-            this.combosch.Size = new System.Drawing.Size(121, 20);
-            this.combosch.TabIndex = 1;
-            this.combosch.SelectedIndexChanged += new System.EventHandler(this.combosch_SelectedIndexChanged);
-            // 
-            // txtsch
-            // 
-            this.txtsch.Location = new System.Drawing.Point(267, 25);
-            this.txtsch.Name = "txtsch";
-            this.txtsch.Size = new System.Drawing.Size(100, 21);
-            this.txtsch.TabIndex = 2;
-            // 
-            // btsch
-            // 
-            this.btsch.Location = new System.Drawing.Point(387, 23);
-            this.btsch.Name = "btsch";
-            this.btsch.Size = new System.Drawing.Size(75, 23);
-            this.btsch.TabIndex = 3;
-            this.btsch.Text = "查询";
-            this.btsch.UseVisualStyleBackColor = true;
-            this.btsch.Click += new System.EventHandler(this.btsch_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 12);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "查询条件";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(208, 28);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 12);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "查询内容";
-            // 
-            // bookmanageDataSet2
-            // 
-            this.bookmanageDataSet2.DataSetName = "bookmanageDataSet2";
-            this.bookmanageDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // caseBookBindingSource
-            // 
-            this.caseBookBindingSource.DataMember = "caseBook";
-            this.caseBookBindingSource.DataSource = this.bookmanageDataSet2;
-            // 
-            // caseBookTableAdapter
-            // 
-            this.caseBookTableAdapter.ClearBeforeFill = true;
             // 
             // caseIDDataGridViewTextBoxColumn
             // 
@@ -243,6 +176,73 @@
             this.stateDataGridViewCheckBoxColumn.Name = "stateDataGridViewCheckBoxColumn";
             this.stateDataGridViewCheckBoxColumn.ReadOnly = true;
             // 
+            // caseBookBindingSource
+            // 
+            this.caseBookBindingSource.DataMember = "caseBook";
+            this.caseBookBindingSource.DataSource = this.bookmanageDataSet2;
+            // 
+            // bookmanageDataSet2
+            // 
+            this.bookmanageDataSet2.DataSetName = "bookmanageDataSet2";
+            this.bookmanageDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // lendBindingSource
+            // 
+            this.lendBindingSource.DataMember = "lend";
+            // 
+            // combosch
+            // 
+            this.combosch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combosch.FormattingEnabled = true;
+            this.combosch.Items.AddRange(new object[] {
+            "图书编码",
+            "书名",
+            "作者"});
+            this.combosch.Location = new System.Drawing.Point(71, 24);
+            this.combosch.Name = "combosch";
+            this.combosch.Size = new System.Drawing.Size(121, 20);
+            this.combosch.TabIndex = 1;
+            this.combosch.SelectedIndexChanged += new System.EventHandler(this.combosch_SelectedIndexChanged);
+            // 
+            // txtsch
+            // 
+            this.txtsch.Location = new System.Drawing.Point(267, 25);
+            this.txtsch.Name = "txtsch";
+            this.txtsch.Size = new System.Drawing.Size(100, 21);
+            this.txtsch.TabIndex = 2;
+            // 
+            // btsch
+            // 
+            this.btsch.Location = new System.Drawing.Point(387, 23);
+            this.btsch.Name = "btsch";
+            this.btsch.Size = new System.Drawing.Size(75, 23);
+            this.btsch.TabIndex = 3;
+            this.btsch.Text = "查询";
+            this.btsch.UseVisualStyleBackColor = true;
+            this.btsch.Click += new System.EventHandler(this.btsch_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 12);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "查询条件";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(208, 28);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 12);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "查询内容";
+            // 
+            // caseBookTableAdapter
+            // 
+            this.caseBookTableAdapter.ClearBeforeFill = true;
+            // 
             // schbk
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -256,12 +256,12 @@
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "schbk";
-            this.Text = "所有借阅信息";
+            this.Text = "图书查询";
             this.Load += new System.EventHandler(this.alllend_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lendBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookmanageDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.caseBookBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookmanageDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lendBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
