@@ -62,3 +62,8 @@ C:\Users\YY\Documents\GitHub\BookManage\winform\Admin\Admin\obj\x86\Debug\Admin.
 C:\Users\YY\Documents\GitHub\BookManage\winform\Admin\Admin\obj\x86\Debug\Admin.csproj.GenerateResource.Cache
 C:\Users\YY\Documents\GitHub\BookManage\winform\Admin\Admin\obj\x86\Debug\Admin.schrd.resources
 C:\Users\YY\Documents\GitHub\BookManage\winform\Admin\Admin\obj\x86\Debug\Admin.addrd.resources
+E:\git\BookManage\winform\Admin\Admin\obj\x86\Debug\Admin.allrd.resources
+E:\git\BookManage\winform\Admin\Admin\obj\x86\Debug\Admin.allbk.resources
+E:\git\BookManage\winform\Admin\Admin\obj\x86\Debug\Admin.addrd.resources
+E:\git\BookManage\winform\Admin\Admin\obj\x86\Debug\Admin.schrd.resources
+E:\git\BookManage\winform\Admin\Admin\obj\x86\Debug\Admin.schbk.resources

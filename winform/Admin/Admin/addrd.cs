@@ -44,7 +44,6 @@ namespace Admin
             else {
                 MessageBox.Show("该读者号可用，请录入详细信息");
             }
-           
         }
 
         private void btbookin_Click(object sender, EventArgs e)
@@ -54,15 +53,11 @@ namespace Admin
                 MessageBox.Show("请填写所有信息");
                 return;
             }
-
-           
             string sqlupcase = "insert into reader values('" + txtrdid.Text.Trim() + "','" 
-                              
                 + txtrdName.Text.Trim() + "','"
-                 
                    + txtYear.Text.Trim()+"." + txtMonth.Text.Trim() + "." + txtDay.Text.Trim() + "','"
-                + txtrddpt.Text.Trim() + "','"
-                 + comboBox1.Text.Trim() +
+                + comboBox1.Text.Trim() + "','"
+                 + txtrddpt.Text.Trim() +
                 "')";
             //insertvlm();
             //MessageBox.Show(sqlupcase);

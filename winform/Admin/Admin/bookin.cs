@@ -111,10 +111,11 @@ namespace Admin
                 + txtisbn.Text.Trim() + "','" + txtdpt.Text.Trim() + "','"
                 + txtclass.Text.Trim() + "','" + txtrow.Text.Trim() + "','"
                 + txtshelf.Text.Trim() + "','" + txtfloor.Text.Trim() + "','" 
-                + txtwriter.Text.Trim() + "')";
-            insertvlm();
+                + txtwriter.Text.Trim() + "','True')";
+            
             //MessageBox.Show(sqlupcase);
             Cdatabase.UpdateDB(sqlupcase);
+            insertvlm();
             MessageBox.Show("录入成功！");
             txtcaseID.Text = "";
             txtcname.Text = "";
@@ -151,7 +152,7 @@ namespace Admin
                     sqlinv += vindata.Rows[i].Cells[j].Value.ToString()+"','";
                 }
                 
-                sqlinv += "false','"+txtcaseID.Text.ToString()+"')";
+                sqlinv += txtcaseID.Text.ToString()+"')";
                 Cdatabase.UpdateDB(sqlinv);
                 //MessageBox.Show(sqlinv);
             }

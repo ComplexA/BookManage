@@ -49,7 +49,7 @@ namespace Admin
 
         private bool chkcid()
         {
-            string sqlchkcid = "select * from caseBook where caseID='"+txtlendcid.Text.Trim()+"'";
+            string sqlchkcid = "select * from caseBook where caseID='"+txtlendcid.Text.Trim()+"' and state='True'";
             DataSet dscase = new DataSet();
             Cdatabase.conn.ConnectionString = Cdatabase.connStr;
             Cdatabase.conn.Open();
