@@ -53,10 +53,22 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.caseBookTableAdapter = new Admin.bookmanageDataSet2TableAdapters.caseBookTableAdapter();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.bookmanageDataSet4 = new Admin.bookmanageDataSet4();
+            this.volumeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.volumeTableAdapter = new Admin.bookmanageDataSet4TableAdapters.volumeTableAdapter();
+            this.vIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vwriterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.divisionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.topicDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.caseBookBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookmanageDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lendBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookmanageDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.volumeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -78,12 +90,14 @@
             this.writerDataGridViewTextBoxColumn,
             this.stateDataGridViewCheckBoxColumn});
             this.dataGridView1.DataSource = this.caseBookBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(14, 62);
+            this.dataGridView1.Location = new System.Drawing.Point(14, 71);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(543, 372);
+            this.dataGridView1.Size = new System.Drawing.Size(545, 180);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // caseIDDataGridViewTextBoxColumn
             // 
@@ -243,11 +257,79 @@
             // 
             this.caseBookTableAdapter.ClearBeforeFill = true;
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.vIDDataGridViewTextBoxColumn,
+            this.vwriterDataGridViewTextBoxColumn,
+            this.divisionDataGridViewTextBoxColumn,
+            this.topicDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn1});
+            this.dataGridView2.DataSource = this.volumeBindingSource;
+            this.dataGridView2.Location = new System.Drawing.Point(12, 257);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RowTemplate.Height = 23;
+            this.dataGridView2.Size = new System.Drawing.Size(547, 176);
+            this.dataGridView2.TabIndex = 6;
+            // 
+            // bookmanageDataSet4
+            // 
+            this.bookmanageDataSet4.DataSetName = "bookmanageDataSet4";
+            this.bookmanageDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // volumeBindingSource
+            // 
+            this.volumeBindingSource.DataMember = "volume";
+            this.volumeBindingSource.DataSource = this.bookmanageDataSet4;
+            // 
+            // volumeTableAdapter
+            // 
+            this.volumeTableAdapter.ClearBeforeFill = true;
+            // 
+            // vIDDataGridViewTextBoxColumn
+            // 
+            this.vIDDataGridViewTextBoxColumn.DataPropertyName = "vID";
+            this.vIDDataGridViewTextBoxColumn.HeaderText = "册号";
+            this.vIDDataGridViewTextBoxColumn.Name = "vIDDataGridViewTextBoxColumn";
+            this.vIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // vwriterDataGridViewTextBoxColumn
+            // 
+            this.vwriterDataGridViewTextBoxColumn.DataPropertyName = "vwriter";
+            this.vwriterDataGridViewTextBoxColumn.HeaderText = "著者";
+            this.vwriterDataGridViewTextBoxColumn.Name = "vwriterDataGridViewTextBoxColumn";
+            this.vwriterDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // divisionDataGridViewTextBoxColumn
+            // 
+            this.divisionDataGridViewTextBoxColumn.DataPropertyName = "division";
+            this.divisionDataGridViewTextBoxColumn.HeaderText = "分书名";
+            this.divisionDataGridViewTextBoxColumn.Name = "divisionDataGridViewTextBoxColumn";
+            this.divisionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // topicDataGridViewTextBoxColumn
+            // 
+            this.topicDataGridViewTextBoxColumn.DataPropertyName = "topic";
+            this.topicDataGridViewTextBoxColumn.HeaderText = "主题词";
+            this.topicDataGridViewTextBoxColumn.Name = "topicDataGridViewTextBoxColumn";
+            this.topicDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "cID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "所在函";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
             // schbk
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(571, 446);
+            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btsch);
@@ -262,6 +344,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.caseBookBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookmanageDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lendBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookmanageDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.volumeBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -299,5 +384,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn floorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn writerDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn stateDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private bookmanageDataSet4 bookmanageDataSet4;
+        private System.Windows.Forms.BindingSource volumeBindingSource;
+        private bookmanageDataSet4TableAdapters.volumeTableAdapter volumeTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vwriterDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn divisionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn topicDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
     }
 }

@@ -74,6 +74,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bookmanageDataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="bookmanageDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bookmanageDataSet4.xsd</DependentUpon>
+    </Compile>
     <Compile Include="schrd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -241,6 +246,17 @@
     </None>
     <None Include="bookmanageDataSet3.xss">
       <DependentUpon>bookmanageDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="bookmanageDataSet4.xsc">
+      <DependentUpon>bookmanageDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="bookmanageDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bookmanageDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bookmanageDataSet4.xss">
+      <DependentUpon>bookmanageDataSet4.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
