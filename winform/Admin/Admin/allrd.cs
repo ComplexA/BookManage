@@ -16,30 +16,27 @@ namespace Admin
             InitializeComponent();
         }
 
-        private void alllend_Load(object sender, EventArgs e)
+        private void allrd_Load(object sender, EventArgs e)
         {
             // TODO: 这行代码将数据加载到表“bookmanageDataSet3.reader”中。您可以根据需要移动或删除它。
             this.readerTableAdapter.Fill(this.bookmanageDataSet3.reader);
-            // TODO: 这行代码将数据加载到表“bookmanageDataSet2.caseBook”中。您可以根据需要移动或删除它。
-            // this.caseBookTableAdapter.Fill(this.bookmanageDataSet2.caseBook);
-            // TODO: 这行代码将数据加载到表“bookmanageDataSet.lend”中。您可以根据需要移动或删除它。
-            // this.lendTableAdapter.Fill(this.bookmanageDataSet.lend);
+        }
+        
+        private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(dataGridView1.CurrentRow.Cells[0].Value.ToString()))
+            {
+                editrd editform = new editrd(dataGridView1.CurrentRow.Cells[0].Value.ToString());
 
-            string sqlStr = "";
-            sqlStr = "select * from reader";
-            DataSet ds = new DataSet();
-            ds = Cdatabase.GetDataFromDB(sqlStr);
-            if (ds != null)
-            {
-                dataGridView1.DataSource = ds.Tables[0];
-            }
-            else
-            {
-                MessageBox.Show("没有符合条件的记录!", "提示");
+                editform.refresh += RefreshForm;
+                editform.Show();
             }
         }
-    
 
+        public void RefreshForm()
+        {
+            dataGridView1.DataSource = Cdatabase.GetDataFromDB("select * from reader").Tables[0];
+        }
 
     }
 }

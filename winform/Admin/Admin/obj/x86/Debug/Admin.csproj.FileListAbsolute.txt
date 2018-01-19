@@ -69,3 +69,4 @@ E:\git\BookManage\winform\Admin\Admin\obj\x86\Debug\Admin.exe
 E:\git\BookManage\winform\Admin\Admin\obj\x86\Debug\Admin.pdb
 E:\git\BookManage\winform\Admin\Admin\obj\x86\Debug\Admin.editbk.resources
 E:\git\BookManage\winform\Admin\Admin\obj\x86\Debug\Admin.editvlm.resources
+E:\git\BookManage\winform\Admin\Admin\obj\x86\Debug\Admin.editrd.resources

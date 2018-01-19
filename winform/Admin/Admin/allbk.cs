@@ -20,19 +20,6 @@ namespace Admin
         {
             // TODO: 这行代码将数据加载到表“bookmanageDataSet2.caseBook”中。您可以根据需要移动或删除它。
              this.caseBookTableAdapter.Fill(this.bookmanageDataSet2.caseBook);
-
-            //string sqlStr = "";
-            //sqlStr = "select * from caseBook";
-            //DataSet ds = new DataSet();
-            //ds = Cdatabase.GetDataFromDB(sqlStr);
-            //if (ds != null)
-            //{
-            //    dataGridView1.DataSource = ds.Tables[0];
-            //}
-            //else
-            //{
-            //    MessageBox.Show("没有符合条件的记录!", "提示");
-            //}
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -45,6 +32,7 @@ namespace Admin
                 editform.Show();
             }
         }
+
         public void RefreshForm()
         {
             dataGridView1.DataSource = Cdatabase.GetDataFromDB("select * from caseBook").Tables[0];

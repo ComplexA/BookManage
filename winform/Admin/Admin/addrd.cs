@@ -17,38 +17,14 @@ namespace Admin
             InitializeComponent();
         }
 
-     
-
-        private void bookin_Load(object sender, EventArgs e)
+        private void btaddrd_Click(object sender, EventArgs e)
         {
-            //vindata.RowCount = 1;
-        }
-
-        private void btdpl_Click(object sender, EventArgs e)
-        {
-            if (txtrdid.Text.Trim() == "")
-            {
-                MessageBox.Show("读者号不能为空");
+            if (checkrd())
                 return;
-            }
-
-            string sqlStr = "select * from reader where rdID='" + txtrdid.Text.Trim() + "'";
-            DataSet ds = new DataSet();
-            Cdatabase.conn.ConnectionString = Cdatabase.connStr;
-            Cdatabase.conn.Open();
-            SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, Cdatabase.conn);
-            adapter.Fill(ds);
-            Cdatabase.conn.Close();
-            if (ds.Tables[0].Rows.Count != 0)
-                MessageBox.Show("该读者已经存在");
-            else {
-                MessageBox.Show("该读者号可用，请录入详细信息");
-            }
-        }
-
-        private void btbookin_Click(object sender, EventArgs e)
-        {
-            if (txtrdName.Text.Trim() == "" || txtYear.Text.Trim() == "" || txtMonth.Text.Trim() == "" || txtDay.Text.Trim() == "" || txtrdid.Text.Trim() == "" ||txtrddpt.Text.Trim() == "" )
+            
+            if (txtrdid.Text.Trim() == ""||txtrdName.Text.Trim() == ""
+                || txtYear.Text.Trim() == "" || txtMonth.Text.Trim() == "" || txtDay.Text.Trim() == "" 
+                ||txtrddpt.Text.Trim() == "" ||comboBox1.SelectedIndex==-1)
             {
                 MessageBox.Show("请填写所有信息");
                 return;
@@ -59,32 +35,37 @@ namespace Admin
                 + comboBox1.Text.Trim() + "','"
                  + txtrddpt.Text.Trim() +
                 "')";
-            //insertvlm();
-            //MessageBox.Show(sqlupcase);
             Cdatabase.UpdateDB(sqlupcase);
-            MessageBox.Show("录入成功！");
+            MessageBox.Show("添加成功！");
             txtrdName.Text = "";
             txtYear.Text = "";
             txtMonth.Text = "";
             txtDay.Text = "";
             txtrddpt.Text = "";
-            
             txtrdid.Text = "";
      
         }
 
- 
-
-     
-
-        private void txtcaseID_Leave(object sender, EventArgs e)
+        private void txtrdid_Leave(object sender, EventArgs e)
         {
-  
+            checkrd();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private bool checkrd()
         {
-
+            string sqlStr = "select * from reader where rdID='" + txtrdid.Text.Trim() + "'";
+            DataSet ds = new DataSet();
+            Cdatabase.conn.ConnectionString = Cdatabase.connStr;
+            Cdatabase.conn.Open();
+            SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, Cdatabase.conn);
+            adapter.Fill(ds);
+            Cdatabase.conn.Close();
+            if (ds.Tables[0].Rows.Count != 0)
+            {
+                MessageBox.Show("该读者已经存在");
+                return true;
+            }
+            else return false;
         }
     }
 }

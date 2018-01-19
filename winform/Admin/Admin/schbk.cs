@@ -36,13 +36,13 @@ namespace Admin
             else if (combosch.SelectedIndex == 0)
                 sqlStr = "select * from caseBook where caseID='" + txtsch.Text.Trim() + "'";
             else if (combosch.SelectedIndex == 1)
-                sqlStr = "select * from caseBook where caseName='" + txtsch.Text.Trim() + "'";
+                sqlStr = "select * from caseBook where caseName like '%" + txtsch.Text.Trim() + "%'";
             else if (combosch.SelectedIndex == 2)
-                sqlStr = "select * from caseBook where writer='" + txtsch.Text.Trim() + "'";
+                sqlStr = "select * from caseBook where writer like '%" + txtsch.Text.Trim() + "%'";
             else if (combosch.SelectedIndex == 3)
-                sqlStr = "select * from caseBook where caseID in (select cID from volume where division='" + txtsch.Text.Trim() + "')";
+                sqlStr = "select * from caseBook where caseID in (select cID from volume where division like '%" + txtsch.Text.Trim() + "%')";
             else if (combosch.SelectedIndex == 4)
-                sqlStr = "select * from caseBook where caseID in (select cID from volume where vwriter='" + txtsch.Text.Trim() + "')";
+                sqlStr = "select * from caseBook where caseID in (select cID from volume where vwriter like '%" + txtsch.Text.Trim() + "%')";
 
             
             DataSet ds = new DataSet();
@@ -119,7 +119,6 @@ namespace Admin
         {
             dataGridView1.DataSource = Cdatabase.GetDataFromDB("select * from caseBook").Tables[0];
             dataGridView2.DataSource = Cdatabase.GetDataFromDB("select * from volume").Tables[0];
-
         }
     }
 }

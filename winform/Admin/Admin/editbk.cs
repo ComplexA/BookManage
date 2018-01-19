@@ -57,7 +57,6 @@ namespace Admin
             this.refresh();
         }
 
-
         public delegate void re();
         public event re refresh;
 

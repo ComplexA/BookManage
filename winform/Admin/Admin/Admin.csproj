@@ -79,11 +79,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bookmanageDataSet4.xsd</DependentUpon>
     </Compile>
+    <Compile Include="bookmanageDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bookmanageDataSet5.xsd</DependentUpon>
+    </Compile>
     <Compile Include="editbk.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="editbk.Designer.cs">
       <DependentUpon>editbk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editrd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editrd.Designer.cs">
+      <DependentUpon>editrd.cs</DependentUpon>
     </Compile>
     <Compile Include="editvlm.cs">
       <SubType>Form</SubType>
@@ -176,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="editbk.resx">
       <DependentUpon>editbk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editrd.resx">
+      <DependentUpon>editrd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="editvlm.resx">
       <DependentUpon>editvlm.cs</DependentUpon>
@@ -275,6 +289,17 @@
     </None>
     <None Include="bookmanageDataSet4.xss">
       <DependentUpon>bookmanageDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="bookmanageDataSet5.xsc">
+      <DependentUpon>bookmanageDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="bookmanageDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bookmanageDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bookmanageDataSet5.xss">
+      <DependentUpon>bookmanageDataSet5.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
