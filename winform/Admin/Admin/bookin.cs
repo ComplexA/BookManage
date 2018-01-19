@@ -105,7 +105,8 @@ namespace Admin
                 }
             }
 
-            string sqlupcase = "insert into caseBook values('" + txtcaseID.Text.Trim() + "','" 
+            string sqlupcase = "insert into caseBook(caseID,caseName,press,pubdate,vnum,isbn,department,classID,row,shelf,floor,writer,state) values('" 
+                + txtcaseID.Text.Trim() + "','" 
                 + txtcname.Text.Trim() + "','"+ txtpress.Text.Trim() + "','"
                 + txtpub.Text.Trim() + "','" + vnumup.Value.ToString() + "','"
                 + txtisbn.Text.Trim() + "','" + txtdpt.Text.Trim() + "','"
@@ -146,7 +147,7 @@ namespace Admin
         {
             for (int i = 0; i < vnumup.Value; i++)
             {
-                string sqlinv = "insert into volume values('";
+                string sqlinv = "insert into volume(vID,division,vwriter,topic,cID) values('";
                 for (int j = 0; j < 4; j++)
                 {
                     sqlinv += vindata.Rows[i].Cells[j].Value.ToString()+"','";

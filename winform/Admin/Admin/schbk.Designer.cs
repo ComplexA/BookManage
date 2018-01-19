@@ -54,21 +54,22 @@
             this.label2 = new System.Windows.Forms.Label();
             this.caseBookTableAdapter = new Admin.bookmanageDataSet2TableAdapters.caseBookTableAdapter();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.bookmanageDataSet4 = new Admin.bookmanageDataSet4();
-            this.volumeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.volumeTableAdapter = new Admin.bookmanageDataSet4TableAdapters.volumeTableAdapter();
             this.vIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vwriterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.divisionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.topicDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.volumeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bookmanageDataSet4 = new Admin.bookmanageDataSet4();
+            this.volumeTableAdapter = new Admin.bookmanageDataSet4TableAdapters.volumeTableAdapter();
+            this.btdelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.caseBookBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookmanageDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lendBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookmanageDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.volumeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookmanageDataSet4)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -90,14 +91,14 @@
             this.writerDataGridViewTextBoxColumn,
             this.stateDataGridViewCheckBoxColumn});
             this.dataGridView1.DataSource = this.caseBookBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(14, 71);
+            this.dataGridView1.Location = new System.Drawing.Point(9, 62);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(545, 180);
+            this.dataGridView1.Size = new System.Drawing.Size(545, 252);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // caseIDDataGridViewTextBoxColumn
             // 
@@ -211,23 +212,24 @@
             this.combosch.Items.AddRange(new object[] {
             "图书编码",
             "书名",
-            "作者"});
+            "作者",
+            "分书名",
+            "分书著者"});
             this.combosch.Location = new System.Drawing.Point(71, 24);
             this.combosch.Name = "combosch";
-            this.combosch.Size = new System.Drawing.Size(121, 20);
+            this.combosch.Size = new System.Drawing.Size(97, 20);
             this.combosch.TabIndex = 1;
-            this.combosch.SelectedIndexChanged += new System.EventHandler(this.combosch_SelectedIndexChanged);
             // 
             // txtsch
             // 
-            this.txtsch.Location = new System.Drawing.Point(267, 25);
+            this.txtsch.Location = new System.Drawing.Point(242, 25);
             this.txtsch.Name = "txtsch";
             this.txtsch.Size = new System.Drawing.Size(100, 21);
             this.txtsch.TabIndex = 2;
             // 
             // btsch
             // 
-            this.btsch.Location = new System.Drawing.Point(387, 23);
+            this.btsch.Location = new System.Drawing.Point(398, 22);
             this.btsch.Name = "btsch";
             this.btsch.Size = new System.Drawing.Size(75, 23);
             this.btsch.TabIndex = 3;
@@ -247,7 +249,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(208, 28);
+            this.label2.Location = new System.Drawing.Point(183, 28);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 12);
             this.label2.TabIndex = 5;
@@ -268,26 +270,13 @@
             this.topicDataGridViewTextBoxColumn,
             this.dataGridViewTextBoxColumn1});
             this.dataGridView2.DataSource = this.volumeBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(12, 257);
+            this.dataGridView2.Location = new System.Drawing.Point(9, 320);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowTemplate.Height = 23;
-            this.dataGridView2.Size = new System.Drawing.Size(547, 176);
+            this.dataGridView2.Size = new System.Drawing.Size(547, 231);
             this.dataGridView2.TabIndex = 6;
-            // 
-            // bookmanageDataSet4
-            // 
-            this.bookmanageDataSet4.DataSetName = "bookmanageDataSet4";
-            this.bookmanageDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // volumeBindingSource
-            // 
-            this.volumeBindingSource.DataMember = "volume";
-            this.volumeBindingSource.DataSource = this.bookmanageDataSet4;
-            // 
-            // volumeTableAdapter
-            // 
-            this.volumeTableAdapter.ClearBeforeFill = true;
+            this.dataGridView2.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellDoubleClick);
             // 
             // vIDDataGridViewTextBoxColumn
             // 
@@ -324,11 +313,36 @@
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
+            // volumeBindingSource
+            // 
+            this.volumeBindingSource.DataMember = "volume";
+            this.volumeBindingSource.DataSource = this.bookmanageDataSet4;
+            // 
+            // bookmanageDataSet4
+            // 
+            this.bookmanageDataSet4.DataSetName = "bookmanageDataSet4";
+            this.bookmanageDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // volumeTableAdapter
+            // 
+            this.volumeTableAdapter.ClearBeforeFill = true;
+            // 
+            // btdelete
+            // 
+            this.btdelete.Location = new System.Drawing.Point(479, 23);
+            this.btdelete.Name = "btdelete";
+            this.btdelete.Size = new System.Drawing.Size(75, 23);
+            this.btdelete.TabIndex = 7;
+            this.btdelete.Text = "删除";
+            this.btdelete.UseVisualStyleBackColor = true;
+            this.btdelete.Click += new System.EventHandler(this.btdelete_Click);
+            // 
             // schbk
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(571, 446);
+            this.ClientSize = new System.Drawing.Size(568, 563);
+            this.Controls.Add(this.btdelete);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -345,8 +359,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.bookmanageDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lendBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookmanageDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.volumeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookmanageDataSet4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -393,5 +407,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn divisionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn topicDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.Button btdelete;
     }
 }

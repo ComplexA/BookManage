@@ -21,16 +21,14 @@ namespace Admin
             // TODO: 这行代码将数据加载到表“bookmanageDataSet4.volume”中。您可以根据需要移动或删除它。
             this.volumeTableAdapter.Fill(this.bookmanageDataSet4.volume);
             // TODO: 这行代码将数据加载到表“bookmanageDataSet2.caseBook”中。您可以根据需要移动或删除它。
-            // this.caseBookTableAdapter.Fill(this.bookmanageDataSet2.caseBook);
-            // TODO: 这行代码将数据加载到表“bookmanageDataSet.lend”中。您可以根据需要移动或删除它。
-            // this.lendTableAdapter.Fill(this.bookmanageDataSet.lend);
-
+             this.caseBookTableAdapter.Fill(this.bookmanageDataSet2.caseBook);
+            
         }
 
         private void btsch_Click(object sender, EventArgs e)
         {
             string sqlStr = "";
-            if (combosch.SelectedIndex<4 && txtsch.Text.Trim() == "")
+            if (txtsch.Text.Trim() == "")
             {
                 MessageBox.Show("请输入需要查询的“" + combosch.SelectedItem.ToString().Trim() + "”!", "提示");
                 return;
@@ -41,8 +39,12 @@ namespace Admin
                 sqlStr = "select * from caseBook where caseName='" + txtsch.Text.Trim() + "'";
             else if (combosch.SelectedIndex == 2)
                 sqlStr = "select * from caseBook where writer='" + txtsch.Text.Trim() + "'";
-            
+            else if (combosch.SelectedIndex == 3)
+                sqlStr = "select * from caseBook where caseID in (select cID from volume where division='" + txtsch.Text.Trim() + "')";
+            else if (combosch.SelectedIndex == 4)
+                sqlStr = "select * from caseBook where caseID in (select cID from volume where vwriter='" + txtsch.Text.Trim() + "')";
 
+            
             DataSet ds = new DataSet();
             ds = Cdatabase.GetDataFromDB(sqlStr);
             if (ds != null)
@@ -60,20 +62,6 @@ namespace Admin
             dataGridView1.DataSource = this.bookmanageDataSet.lend;
         }
 
-        private void combosch_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (combosch.SelectedIndex > 3)
-            {
-                txtsch.ReadOnly = true;
-            }
-            else txtsch.ReadOnly = false;
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             string st=dataGridView1.CurrentRow.Cells[0].Value.ToString();
@@ -88,6 +76,50 @@ namespace Admin
             {
                 MessageBox.Show("没有符合条件的记录!", "提示");
             }
+        }
+
+        private void btdelete_Click(object sender, EventArgs e)
+        {
+            string dltnm = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            string dltid = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            if (MessageBox.Show("确定删除\n图书编码为" + dltid + "\n书名为\t" + dltnm + "？", "提示", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                string sqldltv = "delete from volume where cID ='"+dltid+"'";
+                string sqldltb = "delete from caseBook where caseID='"+dltid+"'";
+                Cdatabase.UpdateDB(sqldltb);
+                Cdatabase.UpdateDB(sqldltv);
+                MessageBox.Show("删除成功");
+                
+                dataGridView1.DataSource = this.bookmanageDataSet2.caseBook;
+                dataGridView2.DataSource = this.bookmanageDataSet4.volume;
+            }
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(dataGridView1.CurrentRow.Cells[0].Value.ToString()))
+            { 
+                editbk editform = new editbk(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+                editform.refresh += RefreshForm;
+                editform.Show();
+            }
+        }
+
+        private void dataGridView2_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(dataGridView2.CurrentRow.Cells[0].Value.ToString()))
+            {
+                editvlm editform = new editvlm(dataGridView2.CurrentRow.Cells[0].Value.ToString());
+                editform.refresh += RefreshForm;
+                editform.Show();
+            }
+        }
+
+        public void RefreshForm()
+        {
+            dataGridView1.DataSource = Cdatabase.GetDataFromDB("select * from caseBook").Tables[0];
+            dataGridView2.DataSource = Cdatabase.GetDataFromDB("select * from volume").Tables[0];
+
         }
     }
 }
