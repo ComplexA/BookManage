@@ -96,7 +96,7 @@ namespace Admin
             if (MessageBox.Show("确定删除\n读者号为" + dltid + "\n姓名为\t" + dltnm + "？", "提示", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 string sqldltv = "delete from reader where rdID ='" + dltid + "'";
-                
+                string sqldltlend = "delete from lend where rdID='"+dltid+"'";
                 Cdatabase.UpdateDB(sqldltv);
                 MessageBox.Show("删除成功");
                 RefreshForm();
