@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>古籍图书借阅</title>
+</head>
+<style> 
+   a{ text-decoration:none;
+	color:#000000;
+	}
+	a:hover{color:#FF0000} 
+</style>
+<body>
+	<center>
+		<div style="width:800px;">
+			<div style="width:800px; height:125px"></div>
+			<div>
+				<img src="../img/head.png" />
+			</div>
+            <div>
+                <form action="search.ashx" method="post" target="_blank">
+                    <select name="schitem" id="schitem">
+                        <option value="caseName">书名</option>
+						<option value="isbn">ISBN</option>
+						<option value="writer">作者</option>
+						<option value="division">分书名</option>
+						<option value="vwriter">分书著者</option>
+                    </select>
+					<input type="text"  style="width:225px;" name="schtx" id="schtx"/>
+					<input type="submit" value="查找" />
+                    <a href="search.ashx" target="_blank"><input type="button" value="查看图书总目" /></a>
+                </form>
+            </div>
+		</div>
+	</center>
+</body>
+</html>

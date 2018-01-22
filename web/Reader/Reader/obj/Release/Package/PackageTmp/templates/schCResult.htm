@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>查询结果 - 古籍图书借阅</title>
+</head>
+<style> 
+    a{ text-decoration:none;
+	color:#000000;
+	}
+	a:hover{color:#FF0000} 
+</style>
+<body>
+    <center>
+		<div style="width:800px;"><!--
+            <div style="float:right;"><font style="font-size:4px">
+			    <a href="#">登陆</a>
+			    <a href="#">注册</a></font>
+			</div>-->
+            <div><img src="../img/head.png" /></div>
+            <!--search box
+             <div>
+                <form action="search.ashx" method="post">
+                    <select name="schitem" id="schitem">
+                        <option value="caseName">书名</option>
+						<option value="isbn">ISBN</option>
+						<option value="writer">作者</option>
+						<option value="vname">分书名</option>
+						<option value="vwriter">分书著者</option>
+                    </select>
+					<input type="text"  style="width:225px;" name="schtx" id="schtx"  value="$Data.tx"/>
+					<input type="submit" value="查找" />
+                    <a href="search.ashx"><input type="button" value="查看图书总目" /></a>
+                </form>
+            </div>
+            <div style="width:800px; height:40px"></div>
+            <!--search box over-->
+            <div>
+            <div>
+            <font style="font-size:5px">
+             <table cellpadding="4px">
+                <tr style="background-color:#CCCCCC;">
+                    <td width="17%">书名</td>
+                    <td width="10%">作者</td>
+                    <td width="17%">出版社</td>
+                    <td width="15%">出版年</td>
+                    <td width="15%">ISBN</td>
+                    <td width="2%">册数</td>
+                    <td width="19%">典藏部门</td>
+                </tr>
+                #foreach($c in $Data.book)
+                <tr style="background-color:#eeeeee;">
+                    <td>
+                        <a href="cdetails.ashx?cid=$c.caseID" target="_blank">
+                            $c.caseName
+                        </a>
+                    </td>
+                    <td>$c.writer</td>
+                    <td>$c.press</td>
+                    <td>$c.pubdate</td>
+                    <td>$c.isbn</td>
+                    <td>$c.vnum</td>
+                    <td>$c.department</td>
+                </tr>
+                #end
+            </table></font>
+           </div>
+           
+        </div>
+    </center>
+</body>
+</html>

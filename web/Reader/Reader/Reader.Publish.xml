@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="E:\AAA\大四\软件实训\网站" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="默认网站/MyApp" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="配置文件1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="bin/Reader.dll" publishTime="01/21/2018 16:40:40" />
+    <file relUrl="bin/Reader.pdb" publishTime="01/21/2018 16:40:39" />
+    <file relUrl="templates/index.htm" publishTime="01/21/2018 16:38:22" />
+    <file relUrl="templates/schCResult.htm" publishTime="01/16/2018 19:47:06" />
+    <file relUrl="templates/search.htm" publishTime="01/16/2018 19:47:06" />
+    <file relUrl="Web.config" publishTime="01/21/2018 16:41:04" />
+    <file relUrl="templates/search.ashx" publishTime="01/16/2018 19:47:06" />
+    <file relUrl="templates/cdetails.htm" publishTime="01/16/2018 19:47:06" />
+    <file relUrl="bin/NVelocity.dll" publishTime="01/16/2018 19:47:05" />
+    <file relUrl="img/head.png" publishTime="01/16/2018 19:47:06" />
+    <file relUrl="templates/schVResult.htm" publishTime="01/16/2018 19:47:06" />
+    <file relUrl="templates/cdetails.ashx" publishTime="01/16/2018 19:47:06" />
+  </publishProfile>
+</publishData>
