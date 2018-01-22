@@ -35,7 +35,7 @@ namespace Admin
             Cdatabase.conn.Close();
             if (!(dscase.Tables[0].Rows.Count == 0))
             {
-                string sqlupcase = "update caseBook set state='false' where caseID='"+txtrtn.Text.Trim()+"'";
+                string sqlupcase = "update caseBook set state='True' where caseID='"+txtrtn.Text.Trim()+"'";
                 string sqldelete = "delete from lend where cID='" + txtrtn.Text.Trim() + "'";
                 
                 DateTime d = Convert.ToDateTime(dscase.Tables[0].Rows[0]["rtndate"].ToString());

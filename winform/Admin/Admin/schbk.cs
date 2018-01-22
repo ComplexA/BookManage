@@ -89,9 +89,8 @@ namespace Admin
                 Cdatabase.UpdateDB(sqldltb);
                 Cdatabase.UpdateDB(sqldltv);
                 MessageBox.Show("删除成功");
-                
-                dataGridView1.DataSource = this.bookmanageDataSet2.caseBook;
-                dataGridView2.DataSource = this.bookmanageDataSet4.volume;
+
+                RefreshForm();
             }
         }
 
