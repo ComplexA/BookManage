@@ -30,7 +30,7 @@ namespace Admin
                 string sqllendbk = "insert into lend values('"+txtlendrid.Text.Trim()
                     + "','" + txtlendcid.Text.Trim() + "','" + DateTime.Now.ToString("yyyy-MM-dd")
                     + "','" + DateTime.Now.AddMonths(1).ToString("yyyy-MM-dd") + " ','false')";
-                string sqlcasest = "update caseBook set state='true' where caseID='"+txtlendcid.Text.Trim()+"'";
+                string sqlcasest = "update caseBook set state='false' where caseID='"+txtlendcid.Text.Trim()+"'";
                 string showinfo = "读者编码：" + txtlendrid.Text.Trim() +
                     "\n图书编码：" + txtlendcid.Text.Trim()+
                     "\n借书日期：" + DateTime.Now.ToString("yyyy-MM-dd") +
